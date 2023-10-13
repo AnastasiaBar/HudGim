@@ -1,0 +1,15 @@
+.subtitle {
+  $block-name: &; // #{$block-name}__element
+
+  max-width: 280px;
+
+  p {
+    margin: 0;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 135%;
+    letter-spacing: 0.75px;
+    text-transform: uppercase;
+    opacity: 0.5;
+  }
+}

@@ -1,0 +1,236 @@
+.coaching-staff {
+  $block-name: &; // #{$block-name}__element
+
+  display: flex;
+  gap: 0 60px;
+  justify-content: space-between;
+  width: 1500px;
+  margin: 205px auto 215px;
+
+  @media (max-width: $screen-dxxl) {
+    padding: 0 40px;
+  }
+
+  @media (max-width: $screen-dxl) {
+    padding: 20px;
+  }
+
+  @media (max-width: $screen-dl) {
+    width: 1280px;
+    padding: 0 20px;
+  }
+
+  @media (max-width: $screen-d) {
+    gap: 0 30px;
+    width: 992px;
+    margin: 100px auto;
+  }
+
+  @media (max-width: $screen-tl) {
+    width: 768px;
+  }
+
+  @media (max-width: $screen-ti) {
+    display: block;
+    width: 576px;
+    padding: 15px;
+  }
+
+  @media (max-width: $screen-t) {
+    width: 100%;
+  }
+
+  &__photo {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      top: 115px;
+      right: -95px;
+      z-index: -1;
+      width: 100vw;
+      height: 600px;
+      background: var(--pink);
+      content: "";
+
+      @media (max-width: $screen-dl) {
+        height: 450px;
+      }
+
+      @media (max-width: $screen-d) {
+        height: 350px;
+      }
+
+      @media (max-width: $screen-tl) {
+        right: -50px;
+        height: 300px;
+      }
+
+      @media (max-width: $screen-ti) {
+        top: 60px;
+        right: 200px;
+        height: 280px;
+      }
+
+      @media (max-width: $screen-ti) {
+        right: 150px;
+      }
+    }
+
+    img {
+      width: 595px;
+      height: 595px;
+      object-fit: cover;
+
+      @media (max-width: $screen-dl) {
+        width: 450px;
+        height: 450px;
+      }
+
+      @media (max-width: $screen-d) {
+        width: 350px;
+        height: 350px;
+      }
+
+      @media (max-width: $screen-tl) {
+        width: 300px;
+        height: 300px;
+      }
+
+      @media (max-width: $screen-t) {
+        width: 250px;
+        height: 250px;
+      }
+    }
+  }
+
+  &__inf {
+    width: calc(100% - 595px - 60px);
+    margin-top: 50px;
+
+    @media (max-width: $screen-dl) {
+      width: calc(100% - 450px - 60px);
+    }
+
+    @media (max-width: $screen-d) {
+      width: calc(100% - 350px - 30px);
+    }
+
+    @media (max-width: $screen-tl) {
+      width: calc(100% - 300px - 30px);
+    }
+
+    @media (max-width: $screen-ti) {
+      width: 100%;
+    }
+
+    @media (max-width: $screen-t) {
+      margin-top: 30px;
+    }
+  }
+
+  &__subtitle {
+    @media (max-width: $screen-t) {
+      display: none;
+    }
+  }
+
+  &__photo-subtitle {
+    display: none;
+    margin-bottom: 10px;
+
+    @media (max-width: $screen-t) {
+      display: block;
+    }
+  }
+
+  &__container-inf {
+    width: calc(100% - 105px);
+    margin-left: 105px;
+
+    @media (max-width: $screen-tl) {
+      width: calc(100% - 50px);
+      margin-left: 50px;
+    }
+
+    @media (max-width: $screen-ti) {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+
+  &__title {
+    margin: 95px 0 30px;
+
+    @media (max-width: $screen-d) {
+      margin: 30px 0 15px;
+    }
+
+    p {
+      margin: 0;
+      color: var(--red);
+      font-size: 100px;
+      font-family: var(--font-dance);
+      line-height: 100%;
+      letter-spacing: 1px;
+
+      @media (max-width: $screen-dl) {
+        font-size: 70px;
+      }
+
+      @media (max-width: $screen-d) {
+        font-size: 60px;
+      }
+
+      @media (max-width: $screen-tl) {
+        font-size: 40px;
+      }
+
+      @media (max-width: $screen-t) {
+        color: var(--color-black);
+      }
+
+      span {
+        @media (max-width: $screen-t) {
+          color: var(--red);
+        }
+      }
+    }
+  }
+
+  &__item {
+    margin-bottom: 24px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    p {
+      margin: 0;
+      font-weight: 300;
+      line-height: 150%; /* 30px */
+      letter-spacing: 0.4px;
+
+      @media (max-width: $screen-t) {
+        font-size: 15px;
+      }
+
+      span {
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__text {
+    width: 81%;
+    padding-left: 10px;
+
+    @media (max-width: $screen-d) {
+      width: 100%;
+    }
+
+    @media (max-width: $screen-t) {
+      padding-left: 88px;
+    }
+  }
+}

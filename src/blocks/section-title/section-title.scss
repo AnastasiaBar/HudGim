@@ -1,0 +1,12 @@
+.section-title {
+  $block-name: &; // #{$block-name}__element
+
+  p {
+    margin: 0;
+    color: var(--red);
+    font-size: 100px;
+    font-family: var(--font-dance);
+    line-height: 100%; /* 100px */
+    letter-spacing: 1px;
+  }
+}

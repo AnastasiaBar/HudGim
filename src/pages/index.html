@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru-RU" class="no-js">
+  @@include('./templates/head.html', {
+    "title": "Page title",
+    "description": "Description",
+    "keywords": "Keywords"
+  })
+
+  <body>
+
+    @@include('./blocks/header/header.html')
+
+    <main>
+      @@include('./blocks/about-company/about-company.html')
+
+      @@include('./blocks/sports-club/sports-club.html')
+
+      @@include('./blocks/coaching-staff/coaching-staff.html')
+
+      <!--@@include('./blocks/block-price/block-price.html')-->
+    </main>
+
+    <script src="/js/bundle.js"></script>
+  </body>
+</html>
+

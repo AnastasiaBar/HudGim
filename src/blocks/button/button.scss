@@ -1,0 +1,54 @@
+.button {
+  $block-name: &; // #{$block-name}__element
+
+  color: var(--color-black);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: 0.4px;
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+
+  @media (max-width: $screen-dl) {
+    font-size: 16px;
+  }
+
+  &--white {
+    padding: 18px 40px;
+    background: var(--color-white);
+    border-radius: 5px;
+    box-shadow: var(--box-shadow-red);
+  }
+
+  &--red {
+    padding: 25px 40px;
+    color: var(--color-white);
+    background: var(--red);
+    border-radius: 5px;
+
+    @media (max-width: $screen-d) {
+      padding: 15px 20px;
+    }
+  }
+
+  &--red-shadow {
+    padding: 25px 40px;
+    color: var(--color-white);
+    font-size: 25px;
+    letter-spacing: 0.5px;
+    background: var(--red);
+    border-radius: 5px;
+    box-shadow: var(--box-shadow-red);
+
+    @media (max-width: $screen-dxl) {
+      font-size: 20px;
+    }
+
+    @media (max-width: $screen-tl) {
+      padding: 15px 20px;
+    }
+  }
+}

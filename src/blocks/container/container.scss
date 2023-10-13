@@ -1,0 +1,37 @@
+.container {
+  $block-name: &; // #{$block-name}__element
+
+  @media (min-width: $screen-m) {
+    width: 100%;
+    padding: 15px;
+  }
+
+  @media (min-width: $screen-t) {
+    width: 576px;
+  }
+
+  @media (min-width: $screen-ti) {
+    width: 768px;
+  }
+
+  @media (min-width: $screen-tl) {
+    width: 992px;
+  }
+
+  @media (min-width: $screen-d) {
+    width: 1280px;
+  }
+
+  @media (min-width: $screen-dl) {
+    width: 1440px;
+    padding: 0 20px;
+  }
+
+  @media (min-width: $screen-dxl) {
+    width: 1680px;
+  }
+
+  @media (min-width: $screen-dxxl) {
+    width: auto;
+  }
+}

@@ -1,0 +1,60 @@
+.block-price {
+  display: flex;
+  gap: 0 84px;
+  justify-content: space-between;
+  width: 1530px;
+  margin: 105px auto 95px;
+
+  .section-title {
+    width: 540px;
+  }
+
+  .button {
+    margin-top: 63px;
+  }
+
+  &__inf {
+    display: flex;
+    gap: 0 20px;
+    justify-content: space-between;
+  }
+
+  &__card {
+    width: calc(100% / 3);
+    padding: 30px;
+    border-radius: 5px;
+
+    &--red {
+      border: 1px solid var(--border-card);
+      box-shadow: var(--box-shadow-card);
+    }
+
+    &--pink {
+      box-shadow: var(--box-shadow-card-disabled);
+    }
+  }
+
+  &__title {
+    margin-bottom: 30px;
+
+    p {
+      margin: 0;
+      font-weight: 600;
+      font-size: 25px;
+      line-height: 120%;
+    }
+  }
+
+  &__text {
+    margin: 0 0 10px;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 100%;
+    letter-spacing: 0.3px;
+
+    &--bold {
+      font-weight: 600;
+    }
+  }
+  $block-name: &; // #{$block-name}__element
+}

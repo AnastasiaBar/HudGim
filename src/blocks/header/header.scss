@@ -1,0 +1,272 @@
+.header {
+  $block-name: &; // #{$block-name}__element
+
+  position: relative;
+  z-index: 300;
+  background: var(--color-white);
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1920px;
+    margin: 0 auto;
+    padding: 35px 40px;
+
+    @media (min-width: $screen-dl) {
+      padding: 20px;
+    }
+
+    @media (min-width: $screen-dxxl) {
+      padding: 35px 40px;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    gap: 0 149px;
+    align-items: center;
+
+    @media (max-width: $screen-dxl) {
+      gap: 0 100px;
+    }
+
+    @media (max-width: $screen-dl) {
+      gap: 0 70px;
+    }
+
+    @media (max-width: $screen-tl) {
+      gap: 0 50px;
+    }
+  }
+
+  &__menu {
+    @media (max-width: $screen-ti) {
+      display: none;
+    }
+
+    nav {
+      ul {
+        display: flex;
+        gap: 0 50px;
+        margin: 0;
+
+        @media (max-width: $screen-tl) {
+          gap: 0 25px;
+        }
+
+        a {
+          color: var(--color-black);
+          font-size: 20px;
+          line-height: 100%;
+          letter-spacing: 0.4px;
+
+          @media (max-width: $screen-dxl) {
+            font-size: 18px;
+          }
+
+          @media (max-width: $screen-dl) {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  &__inf-company {
+    display: flex;
+    gap: 0 69px;
+    align-items: center;
+
+    @media (max-width: $screen-d) {
+      display: none;
+    }
+  }
+
+  &__phone {
+    p {
+      margin: 0;
+      font-size: 30px;
+      line-height: 100%; /* 30px */
+      letter-spacing: 0.6px;
+      font-variant-numeric: lining-nums proportional-nums;
+
+      @media (max-width: $screen-dxl) {
+        font-size: 26px;
+      }
+
+      @media (max-width: $screen-dl) {
+        font-size: 20px;
+      }
+    }
+  }
+
+  &__button {
+    padding: 20px 0;
+  }
+
+  &__burger {
+    display: none;
+
+    @media (max-width: $screen-d) {
+      display: block;
+    }
+  }
+
+  &__burger-input {
+    display: none;
+
+    & + label {
+      position: relative;
+      left: 0;
+      z-index: 5;
+      display: none;
+      width: 22px;
+
+      span {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: var(--color-black);
+        border-radius: 12px;
+
+        &:first-child {
+          top: -8px;
+          width: 17px;
+        }
+
+        &:last-child {
+          top: 8px;
+          width: 12px;
+        }
+      }
+
+      @media (max-width: $screen-d) {
+        display: block;
+      }
+    }
+
+    &:checked + label {
+      span {
+        opacity: 0;
+
+        &:first-child,
+        &:last-child {
+          top: 0;
+          width: 20px;
+          opacity: 1;
+        }
+
+        &:first-child {
+          transform: rotate(405deg);
+        }
+
+        &:last-child {
+          transform: rotate(-405deg);
+        }
+      }
+    }
+  }
+
+  &__burger-input ~ &__burger-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: none;
+    width: 100%;
+    height: 90px;
+    padding: 20px 0;
+    overflow: hidden;
+    background: var(--color-white);
+    transition: 0.3s;
+    transition-delay: 0.3s;
+
+    @media (max-width: $screen-d) {
+      display: block;
+    }
+
+    @media (max-width: $screen-ti) {
+      height: 80px;
+      padding: 0 0 20px;
+    }
+
+    nav {
+      display: block;
+
+      ul {
+        position: relative;
+        z-index: -1;
+        display: block;
+        text-align: center;
+
+        li {
+          opacity: 0;
+          transition: 0.3s;
+          transition-delay: 0s;
+
+          a {
+            display: block;
+            padding: 5px 0;
+            color: var(--color-black);
+            font-size: 16px;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+  &__burger-input:checked ~ &__burger-nav {
+    top: 80px;
+    z-index: 3;
+    height: auto;
+    transition-delay: 0s;
+
+    @media (max-width: $screen-ti) {
+      top: 70px;
+    }
+
+    nav {
+      display: none;
+
+      @media (max-width: $screen-ti) {
+        display: block;
+      }
+
+      ul {
+        z-index: 1;
+
+        li {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__burger-inf-company {
+    display: none;
+    gap: 0 40px;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: $screen-d) {
+      display: flex;
+    }
+
+    @media (max-width: $screen-t) {
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+  }
+
+  &__burger-phone {
+    p {
+      font-variant-numeric: lining-nums proportional-nums;
+      font-size: 16px;
+      line-height: 100%; /* 30px */
+      letter-spacing: 0.6px;
+    }
+  }
+}

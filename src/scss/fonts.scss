@@ -1,0 +1,39 @@
+@font-face {
+  font-weight: 300;
+  font-family: Raleway;
+  font-style: normal;
+  font-display: swap;
+  src: url("/{{fonts}}/Raleway/Raleway-Light.ttf");
+}
+
+@font-face {
+  font-weight: 400;
+  font-family: Raleway;
+  font-style: normal;
+  font-display: swap;
+  src: url("/{{fonts}}/Raleway/Raleway-Regular.ttf");
+}
+
+@font-face {
+  font-weight: 500;
+  font-family: Raleway;
+  font-style: normal;
+  font-display: swap;
+  src: url("/{{fonts}}/Raleway/Raleway-Medium.ttf");
+}
+
+@font-face {
+  font-weight: 700;
+  font-family: Raleway;
+  font-style: normal;
+  font-display: swap;
+  src: url("/{{fonts}}/Raleway/Raleway-Bold.ttf");
+}
+
+@font-face {
+  font-weight: 400;
+  font-family: Dance;
+  font-style: normal;
+  font-display: swap;
+  src: url("/{{fonts}}/Dance/dance_partner.ttf");
+}

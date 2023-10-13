@@ -1,0 +1,31 @@
+@use "sass:color";
+
+:root {
+  --color-black: #000;
+  --color-white: #fff;
+  --pink: rgba(255, 154, 180, 0.20);
+  --red: #F10132;
+  --box-shadow-red: 0 2.62963px 3.14815px 0 rgba(241, 1, 50, 0.02), 0 11.57037px 6.51852px 0 rgba(241, 1, 50, 0.04), 0 28.4px 13px 0 rgba(241, 1, 50, 0.05), 0 54.6963px 25.48148px 0 rgba(241, 1, 50, 0.06), 0 92.03704px 46.85185px 0 rgba(241, 1, 50, 0.08), 0 142px 80px 0 rgba(241, 1, 50, 0.10);
+  --border-card: rgba(241, 1, 50, 0.50);
+  --box-shadow-card: 0px 1.85185px 3.14815px 0px rgba(0, 0, 0, 0.05), 0px 8.14815px 6.51852px 0px rgba(0, 0, 0, 0.04), 0px 20px 13px 0px rgba(241, 1, 50, 0.03), 0px 38.51852px 25.48148px 0px rgba(241, 1, 50, 0.03), 0px 64.81481px 46.85185px 0px rgba(241, 1, 50, 0.02), 0px 100px 80px 0px rgba(0, 0, 0, 0.01);
+  --box-shadow-card-disabled: 0 1.85185px 3.14815px 0 rgb(0 0 0 / 5%), 0 8.14815px 6.51852px 0 rgb(0 0 0 / 4%), 0 20px 13px 0 rgb(241 1 50 / 3%), 0 38.51852px 25.48148px 0 rgb(241 1 50 / 3%), 0 64.81481px 46.85185px 0 rgb(241 1 50 / 2%), 0 100px 80px 0 rgb(0 0 0 / 1%);
+
+  --font-base: Raleway, sans-serif;
+  --font-dance: Dance, sans-serif;
+  --font-size-root: 100%;
+  --font-size-base: 20px;
+  --font-weight-base: 400;
+  --line-height-base: 100%;
+
+}
+
+
+$screen-m: 0;
+$screen-t: 575px;
+$screen-ti: 767px;
+$screen-tl: 991px;
+$screen-d: 1279px;
+$screen-dl: 1439px;
+$screen-dxl: 1679px;
+$screen-dxxl: 1919px;
+
